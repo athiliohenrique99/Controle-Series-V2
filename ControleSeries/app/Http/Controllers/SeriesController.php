@@ -49,7 +49,7 @@ class SeriesController extends Controller
         }
         Episode::insert($episodes);
 
-        return redirect('series.index')
+        return redirect('/series')
             ->with('mensagem.sucesso', "Série '{$serie->nome}' adicionada com sucesso");
     }
 
@@ -57,7 +57,7 @@ class SeriesController extends Controller
     {
         $series->delete();
 
-        return redirect('series.index')
+        return redirect('/series')
             ->with('mensagem.sucesso', "Série '{$series->nome}' removida com sucesso");
     }
 
@@ -71,7 +71,7 @@ class SeriesController extends Controller
         $series->fill($request->all());
         $series->save();
 
-        return redirect('series.index')
+        return redirect('/series')
             ->with('mensagem.sucesso', "Série '{$series->nome}' atualizada com sucesso");
     }
 }
