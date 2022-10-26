@@ -30,7 +30,7 @@ class SeriesController extends Controller
         return view('series.create');
     }
 
-    public function store(SeriesFormRequest $request)
+    public function store(SeriesFormRequest $request, SeriesRepository $repository)
     {
         // $serie = DB::transaction(function () use ($request) {
 
@@ -58,7 +58,7 @@ class SeriesController extends Controller
         //     return $serie;
         // });
 
-        $serie = $this->repository->add($request);
+        $serie = $repository->add($request);
         return redirect('/series')
             ->with('mensagem.sucesso', "Série " . $serie->nome . " adicionada com sucesso");
     }

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Series;
 use App\Repositories\EloquentSeriesRepository;
+use App\Repositories\SeriesRepository;
 use Illuminate\Support\ServiceProvider;
 // use SeriesRepository;
 
