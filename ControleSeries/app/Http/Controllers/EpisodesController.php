@@ -7,7 +7,8 @@ use App\Models\Season;
 class EpisodesController
 {
     public function index(Season $season)
-    {
+    {   
+        dd('aaaa');
         return view('episodes.index', ['episodes' => $season->episodes]);
     }
 }
