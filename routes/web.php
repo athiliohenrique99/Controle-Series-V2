@@ -6,6 +6,7 @@ use App\Http\Controllers\SeriesController;
 use APP\Http\Controllers\EpisodesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Middleware;
+use App\Models\Series;
 
 /*
 |--------------------------------------------------------------------------
