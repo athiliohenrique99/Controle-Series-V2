@@ -4,6 +4,8 @@ use App\Http\Controllers\SeasonsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SeriesController;
 use APP\Http\Controllers\EpisodesController;
+use App\Http\Controllers\LoginController;
+use App\Http\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +30,5 @@ Route::get('/seasons/{season}/episodes', [EpisodesController::class, 'index'])->
 Route::post('/seasons/{season}/episodes', function (\Illuminate\Http\Request $request){
     dd($request->all());
 });
+
+Route::get('/login', [LoginController::class, 'index'])->name('login.index');
